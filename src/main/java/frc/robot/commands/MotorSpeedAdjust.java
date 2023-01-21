@@ -14,12 +14,13 @@ public class MotorSpeedAdjust extends CommandBase {
   private OneMotorSubsystem m_oneMotorSubsystem;
   public double speed = 0.0;
   /** Creates a new MotorSpeedAdjust. */
-  public MotorSpeedAdjust(OneMotorSubsystem subsystem, double spd) {
+  public MotorSpeedAdjust(OneMotorSubsystem subsystem, double d) {
     addRequirements(subsystem);
     m_oneMotorSubsystem = subsystem;
   }
 
-  // Called when the command is initially scheduled.
+
+// Called when the command is initially scheduled.
   @Override
   public void initialize() {}
 
