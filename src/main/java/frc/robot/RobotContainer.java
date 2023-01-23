@@ -31,7 +31,6 @@ public class RobotContainer {
   public final XboxController RC = new XboxController(0);
   public final MotorSpeedAdjust m_motorSpeedAdjust = new MotorSpeedAdjust(m_oneMotorSubsystem, RC.getLeftY());
   public final ConstantSpeed m_constantSpeed = new ConstantSpeed(m_motorConstantSpeed, RC.getRawButtonPressed(1));
-  public final ConstantSpeed m_constantSpeedOff = new ConstantSpeed(m_motorConstantSpeed, RC.getRawButtonPressed(1));
 
   public final ExampleCommand m_autoCommand = new ExampleCommand(m_exampleSubsystem);
  
