@@ -11,9 +11,11 @@ import frc.robot.commands.ExampleCommand;
 import frc.robot.subsystems.ExampleSubsystem;
 import frc.robot.subsystems.MotorConstantSpeed;
 import frc.robot.subsystems.OneMotorSubsystem;
+import frc.robot.subsystems.TwoMotor;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.button.JoystickButton;
 import frc.robot.commands.MotorSpeedAdjust;
+import frc.robot.commands.Shooter;
 
 /**
  * This class is where the bulk of the robot should be declared. Since Command-based is a
@@ -26,13 +28,23 @@ public class RobotContainer {
   private final ExampleSubsystem m_exampleSubsystem = new ExampleSubsystem();
   private final OneMotorSubsystem m_oneMotorSubsystem = new OneMotorSubsystem();
   private final MotorConstantSpeed m_motorConstantSpeed = new MotorConstantSpeed();
+  private final TwoMotor m_twoMotor = new TwoMotor();
   public final XboxController RC = new XboxController(0);
-  public final MotorSpeedAdjust m_motorSpeedAdjust = new MotorSpeedAdjust(m_oneMotorSubsystem, RC.getLeftY());
-  public final ConstantSpeed m_constantSpeed = new ConstantSpeed(m_motorConstantSpeed, RC.getRawButtonPressed(1));
+  public final MotorSpeedAdjust m_motorSpeedAdjust = new MotorSpeedAdjust(m_oneMotorSubsystem, 0);
+  public final ConstantSpeed m_constantSpeed = new ConstantSpeed(m_motorConstantSpeed, false);
+  public final Shooter m_shooter = new Shooter(m_twoMotor, false);
 
   public final ExampleCommand m_autoCommand = new ExampleCommand(m_exampleSubsystem);
  
-  private final JoystickButton m_joy0 = new JoystickButton(RC, 1); // button A
+  private final JoystickButton m_joyA = new JoystickButton(RC, 1); // button A
+  private final JoystickButton m_joyB = new JoystickButton(RC, 2); // button B
+  private final JoystickButton m_joyX = new JoystickButton(RC, 3); // button X
+  private final JoystickButton m_joyY = new JoystickButton(RC, 4); // button Y
+  private final JoystickButton m_joyLT = new JoystickButton(RC, 5); // button Left trigger
+  private final JoystickButton m_joyRT = new JoystickButton(RC, 6); // button Right trigger
+  private final JoystickButton m_joyVB = new JoystickButton(RC, 7); // button View Button
+  private final JoystickButton m_joyMB = new JoystickButton(RC, 8); // button Menu Button
+  
 
 
   /** The container for the robot. Contains subsystems, OI devices, and commands. */
@@ -49,7 +61,8 @@ public class RobotContainer {
    * edu.wpi.first.wpilibj2.command.button.JoystickButton}.
    */
   private void configureButtonBindings() {
-    m_joy0.whileTrue(m_constantSpeed);
+    m_joyA.whileTrue(m_constantSpeed);
+    m_joyB.whileTrue(m_shooter);
   }
 
   public XboxController getController() {

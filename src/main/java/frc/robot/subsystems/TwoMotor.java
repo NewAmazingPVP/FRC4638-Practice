@@ -9,13 +9,14 @@ import com.revrobotics.CANSparkMaxLowLevel.MotorType;
 
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
-public class OneMotorSubsystem extends SubsystemBase {
+public class TwoMotor extends SubsystemBase {
   CANSparkMax m_flywheel = new CANSparkMax(13, MotorType.kBrushless);
+  CANSparkMax m_flywheel1 = new CANSparkMax(14, MotorType.kBrushless);
 
   double m_power;
 
   /** Creates a new OneMotorSubsystem. */
-  public OneMotorSubsystem() {
+  public TwoMotor() {
     m_power = 0.0;
   }
 
@@ -23,7 +24,7 @@ public class OneMotorSubsystem extends SubsystemBase {
   public void periodic() {
     // This method will be called once per scheduler run
     m_flywheel.set(m_power);
-  
+    m_flywheel1.set(m_power);
   }
 
   public void setPower(double power) {
