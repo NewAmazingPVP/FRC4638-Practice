@@ -36,14 +36,14 @@ public class RobotContainer {
 
   public final ExampleCommand m_autoCommand = new ExampleCommand(m_exampleSubsystem);
  
-  private final JoystickButton m_joyA = new JoystickButton(RC, 1); // button A
-  private final JoystickButton m_joyB = new JoystickButton(RC, 2); // button B
-  private final JoystickButton m_joyX = new JoystickButton(RC, 3); // button X
-  private final JoystickButton m_joyY = new JoystickButton(RC, 4); // button Y
-  private final JoystickButton m_joyLB = new JoystickButton(RC, 5); // button Left bumper
-  private final JoystickButton m_joyRB = new JoystickButton(RC, 6); // button Right bumper
-  private final JoystickButton m_joyVB = new JoystickButton(RC, 7); // button View Button
-  private final JoystickButton m_joyMB = new JoystickButton(RC, 8); // button Menu Button
+  public final JoystickButton m_joyA = new JoystickButton(RC, 1); // button A
+  public final JoystickButton m_joyB = new JoystickButton(RC, 2); // button B
+  public final JoystickButton m_joyX = new JoystickButton(RC, 3); // button X
+  public final JoystickButton m_joyY = new JoystickButton(RC, 4); // button Y
+  public final JoystickButton m_joyLB = new JoystickButton(RC, 5); // button Left bumper
+  public final JoystickButton m_joyRB = new JoystickButton(RC, 6); // button Right bumper
+  public final JoystickButton m_joyVB = new JoystickButton(RC, 7); // button View Button
+  public final JoystickButton m_joyMB = new JoystickButton(RC, 8); // button Menu Button
   
 
 
