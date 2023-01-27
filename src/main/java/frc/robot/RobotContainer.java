@@ -40,10 +40,10 @@ public class RobotContainer {
   public final JoystickButton m_joyB = new JoystickButton(RC, 2); // button B
   public final JoystickButton m_joyX = new JoystickButton(RC, 3); // button X
   public final JoystickButton m_joyY = new JoystickButton(RC, 4); // button Y
-  public final JoystickButton m_joyLB = new JoystickButton(RC, 5); // button Left bumper
-  public final JoystickButton m_joyRB = new JoystickButton(RC, 6); // button Right bumper
-  public final JoystickButton m_joyVB = new JoystickButton(RC, 7); // button View Button
-  public final JoystickButton m_joyMB = new JoystickButton(RC, 8); // button Menu Button
+  public final JoystickButton m_joyLB = new JoystickButton(RC, 5); // Left bumper
+  public final JoystickButton m_joyRB = new JoystickButton(RC, 6); // Right bumper
+  public final JoystickButton m_joyVB = new JoystickButton(RC, 7); // View Button
+  public final JoystickButton m_joyMB = new JoystickButton(RC, 8); // Menu Button
   
 
 
