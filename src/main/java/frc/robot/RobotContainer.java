@@ -49,6 +49,7 @@ public class RobotContainer {
 
   /** The container for the robot. Contains subsystems, OI devices, and commands. */
   public RobotContainer() {
+  m_oneMotorSubsystem.setDefaultCommand(m_motorSpeedAdjust);    
     // Configure the button bindings
     configureButtonBindings();
   }

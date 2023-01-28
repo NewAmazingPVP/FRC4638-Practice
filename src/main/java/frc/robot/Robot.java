@@ -82,16 +82,8 @@ public class Robot extends TimedRobot {
   /** This function is called periodically during operator control. */
   @Override
   public void teleopPeriodic() {
-    if(m_robotContainer.RC.getLeftY() == 0.0) 
-    {
-      m_robotContainer.m_motorSpeedAdjust.speed = 0.0;
-    } 
-    else
-    {
-      m_robotContainer.m_motorSpeedAdjust.speed = m_robotContainer.RC.getLeftY();
-      System.out.println(m_robotContainer.RC.getLeftY());
-    }
-
+    m_robotContainer.m_motorSpeedAdjust.speed = m_robotContainer.RC.getLeftY();
+    System.out.println(m_robotContainer.RC.getLeftY());
   }
 
   @Override
