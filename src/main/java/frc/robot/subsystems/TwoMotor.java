@@ -6,12 +6,11 @@ package frc.robot.subsystems;
 
 import com.revrobotics.CANSparkMax;
 import com.revrobotics.CANSparkMaxLowLevel.MotorType;
-
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
+
 
 public class TwoMotor extends SubsystemBase {
   CANSparkMax m_flywheel1 = new CANSparkMax(14, MotorType.kBrushless);
-
   double m_power;
 
   /** Creates a new OneMotorSubsystem. */

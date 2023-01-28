@@ -32,7 +32,7 @@ public class RobotContainer {
   public final XboxController RC = new XboxController(0);
   public final MotorSpeedAdjust m_motorSpeedAdjust = new MotorSpeedAdjust(m_oneMotorSubsystem, 0);
   public final ConstantSpeed m_constantSpeed = new ConstantSpeed(m_motorConstantSpeed, false);
-  public final Shooter m_shooter = new Shooter(m_twoMotor, false);
+  public final Shooter m_shooter = new Shooter(m_twoMotor, m_oneMotorSubsystem);
 
   public final ExampleCommand m_autoCommand = new ExampleCommand(m_exampleSubsystem);
  
@@ -44,6 +44,7 @@ public class RobotContainer {
   public final JoystickButton m_joyRB = new JoystickButton(RC, 6); // Right bumper
   public final JoystickButton m_joyVB = new JoystickButton(RC, 7); // View Button
   public final JoystickButton m_joyMB = new JoystickButton(RC, 8); // Menu Button
+
   
 
 
